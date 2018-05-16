@@ -1,3 +1,3 @@
 <div class="footer navbar-fixed-bottom">
-<center>Copyright Devgunner</center>
+<center>Copyright NyikDewo</center>
  </div>

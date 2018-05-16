@@ -45,22 +45,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
 <main role="main" class="container">
-      <a href="<?php echo base_url("index.php/Blog/add_view") ?>" class="btn btn-primary">Tambah Blog</a>
-      <ul class="list-unstyled">
-  <?php foreach ($records as $key => $value): ?>
-    <li class="media">
-    <img class="mr-3" src="<?php echo base_url() ?>uploads/<?php echo $value['image_file'] ?>" alt="Generic placeholder image" width="100px" height="150px">
-    <div class="media-body">
-      <h5 class="mt-0 mb-1"><?php echo $value['title'] ?></h5>
-      <h6 class="text-muted"><?php echo $value['date'] ?></h6>
-      <?php echo $value['content'] ?>
-      <br>
-      <a href="<?php echo base_url('index.php/Blog/byId/'.$value['id']) ?>">View Details</a>
-    </div>
-  </li>
-  <?php endforeach ?>
-</ul>
-    </main> 
+<?php echo validation_errors() ?>
+     <?php echo form_open( 'category/update/'.$cat_update['cat_id'], array('class' => 'needs-validation', 'novalidate' => '') ); ?>
+  <div class="form-group">
+    <label for="cat_name">Nama Kategori</label>
+    <input type="text" class="form-control" name="cat_name" value="<?php echo $cat_update['cat_name'] ?>" required>
+    <div class="invalid-feedback">Isi judul dulu gan</div>
+  </div>
+
+  <div class="form-group">
+    <label for="text">Deskripsi</label>
+    <input type="text" class="form-control" name="cat_description" value="<?php echo $cat_update['cat_description'] ?>" required>
+    <div class="invalid-feedback">Isi deskripsinya dulu gan</div>
+  </div>
+  <button id="submitBtn" type="submit" class="btn btn-success">Ubah</button>
+   </main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
