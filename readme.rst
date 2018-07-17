@@ -68,3 +68,9 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+***************
+Pengumuman
+***************
+
+Saya kumpulkan hari jumat pak , karena masih kendala di tugas kelompok sama yang lainnya
